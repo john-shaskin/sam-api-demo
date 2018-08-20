@@ -10,7 +10,7 @@ exports.lambda_handler = async (event, context, callback) => {
         response = {
             'statusCode': 200,
             'body': JSON.stringify({
-                message: 'hello world',
+                message: `Hello, ${event.pathParameters.name}!!`,
                 location: ret.data.trim()
             })
         }
